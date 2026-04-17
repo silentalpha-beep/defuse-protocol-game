@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Defuse Protocol: Studio Edition</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- MENU -->
+<div id="menu" class="scene active">
+  <h1>🏆 DEFUSE PROTOCOL</h1>
+  <button onclick="startGame()">Start Mission</button>
+  <button onclick="showHow()">How To Play</button>
+  <button onclick="showLeaderboard()">Leaderboard</button>
+</div>
+
+<!-- HOW TO PLAY -->
+<div id="how" class="scene">
+  <h2>How To Play</h2>
+  <p>Cut the correct wire before time runs out. Each level gets faster.</p>
+  <button onclick="backMenu()">Back</button>
+</div>
+
+<!-- LEADERBOARD -->
+<div id="leaderboard" class="scene">
+  <h2>Leaderboard</h2>
+  <div id="scores"></div>
+  <button onclick="backMenu()">Back</button>
+</div>
+
+<!-- GAME -->
+<div id="game" class="scene">
+  <h2>🚨 Mission Active</h2>
+  <p>Score: <span id="score">0</span></p>
+  <p>Lives: <span id="lives">3</span></p>
+  <p>Time: <span id="time">10</span></p>
+  <p id="status"></p>
+
+  <div class="wires">
+    <button onclick="cutWire('red')" class="red">Red</button>
+    <button onclick="cutWire('blue')" class="blue">Blue</button>
+    <button onclick="cutWire('green')" class="green">Green</button>
+    <button onclick="cutWire('yellow')" class="yellow">Yellow</button>
+  </div>
+
+  <div class="controls">
+    <button onclick="pauseGame()">Pause</button>
+    <button onclick="resumeGame()">Resume</button>
+    <button onclick="restartGame()">Restart</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
